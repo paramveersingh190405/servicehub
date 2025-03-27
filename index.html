@@ -14,6 +14,7 @@
       .gradient {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
       }
+
     </style>
   </head>
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
@@ -180,53 +181,61 @@
       </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="bg-white border-b py-8">
-      <div class="container max-w-5xl mx-auto m-8">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Contact Us
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Get In Touch
-            </h3>
-            <p class="text-gray-600 mb-8">
-              Have any questions or need to book a service? Feel free to reach out to us. We're here to help!
-            </p>
-            <form class="w-full max-w-lg">
-              <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    First Name
-                  </label>
-                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
-                </div>
-                <div class="w-full md:w-1/2 px-3">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                    Last Name
-                  </label>
-                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
-                </div>
-              </div>
-              <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
-                    Email
-                  </label>
-                  <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" type="email" placeholder="jane.doe@example.com">
-                </div>
-              </div>
-              <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-message">
-                    Message
-                  </label>
-                  <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-message" placeholder="Your message..."></textarea>
-                </div>
-              </div>
-              <div class="flex flex-wrap -mx-3 mb-2">
-                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                  <button class="bg-blue-500 hover:bg-blue>
+    <section id="contact" class="bg-white py-12">
+      <div class="container max-w-4xl mx-auto">
+          <h2 class="text-5xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
+          <p class="text-gray-600 text-center mb-8">
+              Have questions? Reach out to us and we’ll get back to you soon!
+          </p>
+
+          <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+              <form id="contactForm" class="space-y-4">
+                  <div>
+                      <label class="block text-gray-700 font-semibold mb-1">Name</label>
+                      <input type="text" id="name" class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 text-black" placeholder="Enter your name" required>
+                  </div>
+
+                  <div>
+                      <label class="block text-gray-700 font-semibold mb-1">Email</label>
+                      <input type="email" id="email" class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 text-black" placeholder="Enter your email" required>
+                  </div>
+
+                  <div>
+                      <label class="block text-gray-700 font-semibold mb-1">Message</label>
+                      <textarea id="message" rows="4" class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 text-black" placeholder="Write your message" required></textarea>
+                  </div>
+
+                  <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                      Send Message
+                  </button>
+              </form>
+
+              <!-- Success Message -->
+              <p id="successMessage" class="text-green-600 text-center mt-4 hidden">Message sent successfully!</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer (Optional) -->
+  <footer class="bg-blue-600 text-white text-center py-4 mt-12">
+      © 2025 My Website. All rights reserved.
+  </footer>
+
+
+<!-- JavaScript for Form Handling 
+  <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          document.getElementById('successMessage').classList.remove('hidden');
+          setTimeout(() => {
+              document.getElementById('successMessage').classList.add('hidden');
+              document.getElementById('contactForm').reset();
+          }, 3000);
+      });
+  </script>
+  -->
+</body>
+</html>
+
+
+          
