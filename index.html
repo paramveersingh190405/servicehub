@@ -16,6 +16,7 @@
       }
 
     </style>
+    <script src="main.js"></script>
   </head>
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
@@ -222,20 +223,32 @@
   </footer>
 
 
-<!-- JavaScript for Form Handling 
   <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-          event.preventDefault();
-          document.getElementById('successMessage').classList.remove('hidden');
-          setTimeout(() => {
-              document.getElementById('successMessage').classList.add('hidden');
-              document.getElementById('contactForm').reset();
-          }, 3000);
-      });
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('successMessage').classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('contactForm').reset();
+        }, 3000);
+    });
   </script>
-  -->
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      const navContent = document.getElementById('nav-content');
+      navContent.classList.toggle('hidden');
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  
 </body>
 </html>
-
-
-          
