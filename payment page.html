@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>Payment Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Payment</h1>
+        <form action="/process-payment" method="POST">
+            <div class="payment-methods">
+                <h2>Select Payment Method</h2>
+                <div class="method">
+                    <input type="radio" id="upi" name="payment-method" value="upi" required>
+                    <label for="upi">
+                        <img src="icons/upi.png" alt="UPI" class="icon"> UPI
+                    </label>
+                </div>
+                <div class="method">
+                    <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer">
+                    <label for="bank-transfer">
+                        <img src="icons/bank-transfer.png" alt="Bank Transfer" class="icon"> Bank Transfer
+                    </label>
+                </div>
+                <div class="method">
+                    <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+                    <label for="credit-card">
+                        <img src="icons/credit-card.png" alt="Credit/Debit Card" class="icon"> Credit/Debit Card
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="submit-button">Proceed to Payment</button>
+        </form>
+    </div>
+</body>
+</html>
